@@ -1,16 +1,18 @@
 # Sample Authors
 # Remove file or replace with your own
 
-Billy Rick:
-  name: Billy Rick
-  picture: /images/bio-photo-2.jpg
-  twitter: "@billyrick"
+Smit:
+  name: Abdullah Rasmita
+  picture: /images/smit.jpg
   links:
-    - title: Twitter
-      url: https://twitter.com/billyrick
-      icon: fab fa-twitter-square
+    - title: Facebook
+      url: https://www.facebook.com/abdullah.rasmita/
+      icon: fab fa-facebook-square
 
-Cornelius Fiddlebone:
-  name: Cornelius Fiddlebone
-  picture: /images/bio-photo.jpg
-  twitter: corneliusfiddlebone
+Zna:
+  name: Rahmi Indrizna
+  picture: /images/zna.jpg
+  links:
+    - title: Facebook
+      url: https://www.facebook.com/rahmi.indrizna
+      icon: fab fa-facebook-square 

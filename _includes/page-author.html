@@ -1,7 +1,10 @@
-{%- assign author = page.author | default: page.authors[0] | default: site.author -%}
-{%- assign author = site.data.authors[author] | default: author -%}
+{%- assign authors = page.author | split: "," -%}
+<!-- {%- assign author = page.author | default: page.authors[0] | default: site.author -%} -->
+<!-- {%- assign author = site.data.authors[author] | default: author -%} -->
 
 <div class="page-author h-card p-author">
+  {%- for author1 in authors -%}
+  {%- assign author = site.data.authors[author1]%}
   {%- if author.picture -%}
     {%- if author.picture contains "://" -%}
       {%- assign author_picture = author.picture -%}
@@ -14,7 +17,7 @@
   <div class="author-info">
     {%- if author.name -%}
       <div class="author-name">
-        {% if site.data.text[site.locale].by %}<em>{{ site.data.text[site.locale].by }}</em> {% endif %}<span class="p-name">{{ author.name }}</span>
+        <span class="p-name">{{ author.name }}</span>
       </div>
     {%- endif -%}
     {%- if author.links -%}
@@ -31,7 +34,8 @@
         {%- endfor -%}
       </ul>
     {%- endif -%}
-    {% if site.read_time %}{% include read-time.html %}{% endif %}
-    {% if page.date %}{% include page-date.html %}{% endif %}
   </div>
+  {%- endfor -%}
+  {% if site.read_time %}{% include read-time.html %}{% endif %}
+  {% if page.date %}{% include page-date.html %}{% endif %}
 </div>
